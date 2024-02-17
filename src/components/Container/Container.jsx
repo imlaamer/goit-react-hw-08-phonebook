@@ -1,19 +1,15 @@
-import React from 'react';
-
 export function Container({ children }) {
   return (
     <div
       style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
         fontSize: 40,
         color: '#010101',
+        paddingTop: 'calc(100vh / 2 - 210px)',
       }}
     >
       <div
         style={{
+          margin: '0 auto',
           width: 680,
           padding: 30,
           display: 'flex',

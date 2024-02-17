@@ -12,7 +12,7 @@ export function ContactForm() {
     const form = event.currentTarget;
     const newContact = {
       name: form.elements.name.value,
-      phone: form.elements.number.value,
+      number: form.elements.number.value,
     };
     const isDuplicate = items.some(
       contact =>
@@ -22,10 +22,13 @@ export function ContactForm() {
       toast.warn(`${newContact.name} is already in contacts`);
       return;
     }
-    dispatch(addContact(newContact));
+    dispatch(addContact(newContact))
+      .unwrap(toast.success('Your contact were successfully added!'))
+      .catch(() =>
+        toast.error('Something went wrong. Please try again later!')
+      );
     form.reset();
   };
-
   const {
     phonebookBox,
     phonebookForm,
@@ -34,7 +37,6 @@ export function ContactForm() {
     formLabel,
     phoneBookInputNumber,
   } = css;
-
   return (
     <div className={phonebookBox}>
       <form className={phonebookForm} onSubmit={handleAddContact}>

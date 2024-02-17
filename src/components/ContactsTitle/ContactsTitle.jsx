@@ -1,5 +1,3 @@
-import React from 'react';
-
 export function ContactsTitle() {
   return (
     <h2
@@ -8,6 +6,7 @@ export function ContactsTitle() {
         fontSize: 40,
         textAlign: 'center',
         marginTop: 0,
+        marginBottom: 30,
       }}
     >
       Contacts

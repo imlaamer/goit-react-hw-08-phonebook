@@ -6,17 +6,20 @@ import {
   selectFilteredContacts,
   selectIsLoading,
 } from '../../redux';
+import { toast } from 'react-toastify';
 import css from './ContactList.module.css';
 
 export function ContactList() {
   const dispatch = useDispatch();
   const filteredContacts = useSelector(selectFilteredContacts);
   const isLoading = useSelector(selectIsLoading);
-
   useEffect(() => {
-    dispatch(fetchContacts());
+    dispatch(fetchContacts())
+      .unwrap()
+      .catch(() =>
+        toast.error('Something went wrong. Please try again later!')
+      );
   }, [dispatch]);
-
   const { contactsBox, contactsList } = css;
   return (
     <>

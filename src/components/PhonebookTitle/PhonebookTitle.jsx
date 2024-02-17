@@ -8,9 +8,7 @@ export function PhonebookTitle() {
         marginTop: 0,
       }}
     >
-      Phonebook
+      New contact
     </h1>
   );
 }
-
-

@@ -1,0 +1,26 @@
+.userMenuBox {
+  position: absolute;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.userMenuBtn {
+  font-size: clamp(12px, 4vw, 18px);
+  padding: 4px 8px;
+  width: 80px;
+  border-radius: 22px;
+  cursor: pointer;
+  transition: background-color 300ms ease-in-out, box-shadow 200ms ease-in-out,
+    transform 200ms ease-in-out;
+}
+.userMenuBtn {
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+}
+
+.userMenuBtn:is(:hover, :focus) {
+  transform: scale(1.06);
+}
