@@ -6,7 +6,7 @@ header {
   padding-top: 10px;
   padding-bottom: 10px;
   width: 100%;
-  max-width: 1440px;
+  /* max-width: 1440px; */
   background-color: #09012f;
   backdrop-filter: blur(10px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
